@@ -180,6 +180,17 @@ true !== false; //true
 // let hello = "Ciao" + " " + firstName;
 // console.log(hello);
 
+// let topolino = 5;
+
+// topolino = topolino + 10;
+// topolino += 10; // equivalente a: topolino = topolino + 10;
+
+
+// topolino = topolino + 1;
+// topolino += 1;
+// topolino++;
+
+
 //DIFFERENZA TRA LET E VAR;
 
 
@@ -268,5 +279,32 @@ true !== false; //true
 
 // alert("la somma è: " + sum);
 
+// let pippo;
+
+// console.log('il contenuto di pippo è: ' + pippo)
+// console.log('il tipo di pippo è: ' + typeof pippo)
 
 
+// pippo = 5;
+
+// console.log('il contenuto di pippo è: ' + pippo)
+// console.log('il tipo di pippo è: ' + typeof pippo)
+
+// pippo = 'cinque'
+
+// console.log('il contenuto di pippo è: ' + pippo)
+// console.log('il tipo di pippo è: ' + typeof pippo)
+
+// pippo = true;
+
+// console.log('il contenuto di pippo è: ' + pippo)
+// console.log('il tipo di pippo è: ' + typeof pippo)
+
+
+// const pluto = 3;
+
+// console.log('il contenuto di pluto è: ' + pluto)
+// console.log('il tipo di pluto è: ' + typeof pluto)
+
+
+// pluto = 10
