@@ -73,13 +73,238 @@
 
 
 //     } else {
-//         console.log("dispari")
+//         console.log("dispari");
 //     }
 
 // }
 
 // 8) usando un ciclo logga i numeri da 1 a 100 mettendo un asterisco vicino ai multipli di 7
+
+// for (let i = 1; i <= 100; i++) {
+
+//     if (i % 7 === 0) {
+//         console.log(i + '*');
+//     } else {
+//         console.log(i);
+//     }
+
+// }
+
 // 9) usando un ciclo logga i numeri da 1 a 100 mettendo un asterisco vicino ai quadrati perfetti
+
+// for (let i = 1; i <= 100 ; i++) {
+
+//     let squareRoot = Math.sqrt(i);
+
+//     if (Number.isInteger(squareRoot)) {
+//         console.log(i + "*");
+//     } else {
+//         console.log(i);
+//     }
+
+// }
+
 // 10) chiedi all'utente un numero (positivo) di partenza e poi logga tutti i numeri dal numero dato fino a 0
+
+
+// let userResponse = prompt('Dammi un numero positivo?');
+
+// let userNumber = Number(userResponse);
+
+// for (let i = userNumber; i >= 0; i--) {
+
+//     console.log(i);
+
+// }
+
+
 // 11) chiedi all'utente due numeri e logga tutti i numeri pari compresi tra i numeri forniti dall'utente
+
+// const number1 = prompt('inserisci il primo numero?');
+// const convertedNumber1 = Number(number1);
+
+// const number2 = prompt('inserisci il secondo numero?');
+// const convertedNumber2 = Number(number2);
+
+// for (let i = convertedNumber1; i <= convertedNumber2; i++) {
+//     if (i % 2 === 0) {
+//         console.log(i);
+//     }
+// }
+
 // 12) chiedi all'utente quanti anni ha e digli quante ore ha gia' vissuto
+
+// let age = Number(prompt('Quanti anni hai?'));
+
+// const hours = age * 365 * 24;
+
+// console.log('Hai gia sprecato ' + hours + ' ore');
+
+// 13) Write a loop that makes seven calls to console.log to output the following triangle:
+// #
+// ##
+// ###
+// ####
+// #####
+// ######
+// #######
+
+
+// let line = '#';
+
+// for (let i = 0; i < 7; i++) {
+
+//     console.log(line);
+
+//     line = line + '#';
+
+// }
+
+//14) Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.
+//When you have that working, modify your program to print "FizzBuzz" for numbers that are divisible by both 3 and 5 (and still print "Fizz" or "Buzz" for numbers divisible by only one of those).
+
+// for (let i = 1; i <= 100; i++) {
+
+//     if (i % 3 === 0) {
+//         console.log('fizz');
+//     } else if (i % 5 === 0){
+//         console.log('buzz');
+//     } else {
+//         console.log(i);
+//     }
+
+// }
+
+// for (let i = 1; i <= 100; i++) {
+
+//     if (i % 3 === 0 && i % 5 === 0) {
+//         console.log('fizzbuzz');
+//     } else if (i % 5 === 0){
+//         console.log('buzz');
+//     } else if (i % 3 === 0){
+//         console.log('fizz');
+//     } else {
+//         console.log(i);
+//     }
+
+// }
+
+// for (let i = 1; i <= 100; i++) {
+
+//     if (i % 3 === 0 && i % 5 !== 0) {
+//         console.log('fizz');
+//     } else if (i % 5 === 0 && i % 3 !== 0){
+//         console.log('buzz');
+//     } else if (i % 3 === 0 && i % 5 === 0){
+//         console.log('fizzbuzz');
+//     } else {
+//         console.log(i);
+//     }
+
+// }
+
+// for (let i = 1; i <= 100; i++) {
+
+//     let response = '';
+
+//     if (i % 3 === 0) {
+//         response = response + 'fizz';
+//     }
+//     if (i % 5 === 0) {
+//         response = response + 'buzz';
+//     }
+//     if (response === '') {
+//         console.log(i);
+//     } else {
+//         console.log(response);
+//     }
+
+// }
+
+
+
+// 1 : 3 = 0 -> r: 1 -> 1 % 3 = 1
+// 2 : 3 = 0 -> r: 2 -> 2 % 3 = 2
+// 3 : 3 = 1 -> r: 0 -> 3 % 3 = 0
+// ---
+// 5 : 3 = 1 -> r: 2 -> 5 % 3 = 2
+// ---
+// 27 : 3 = 9 -> r: 0 -> 27 % 3 = 0
+
+
+// 15) Chessboard
+// Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a "#" character. The characters should form a chessboard.
+// Passing this string to console.log should show something like this:
+//  # # # #
+// # # # # 
+//  # # # #
+// # # # # 
+//  # # # #
+// # # # # 
+//  # # # #
+// # # # #
+//When you have a program that generates this pattern, define a binding size = 8 and change the program so that it works for any size, outputting a grid of the given width and height.
+
+// for (let i = 0; i < 8; i++) { 
+//     if (i % 2 === 0) {
+//         console.log(' # # # #');
+//     } else {
+//         console.log('# # # # ');
+//     }
+// }
+
+
+// let chessboard = '';
+
+// for (let i = 0; i < 8; i++) { 
+//     if (i % 2 === 0) {
+//         chessboard = chessboard + ' # # # #\n';
+//     } else {
+//         chessboard = chessboard + '# # # # \n';
+//     }
+// }
+
+// console.log(chessboard);
+
+// let size = 18;
+
+// let chessboard = '';
+
+// for (let line = 0; line < size; line++) {
+//     for (let column = 0; column < size; column++) {
+//         if (line % 2 === 0) {
+//             if (column % 2 === 0) {
+//                 chessboard = chessboard + ' ';
+//             } else {
+//                 chessboard = chessboard + '#';
+//             }
+//         } else {
+//             if (column % 2 === 0) {
+//                 chessboard = chessboard + '#';
+//             } else {
+//                 chessboard = chessboard + ' ';
+//             }
+//         }
+//     }
+//     chessboard = chessboard + '\n';
+// }
+
+// console.log(chessboard)
+
+
+// let size = 50;
+
+// let chessboard = '';
+
+// for (let line = 0; line < size; line++) {
+//     for (let column = 0; column < size; column++) {
+//         if ((line + column) % 2 === 0) {
+//             chessboard = chessboard + ' ';
+//         } else {
+//             chessboard = chessboard + '#';
+//         }
+//     }
+//     chessboard = chessboard + '\n';
+// }
+
+// console.log(chessboard)
