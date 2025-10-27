@@ -308,3 +308,97 @@
 // }
 
 // console.log(chessboard)
+
+
+// 16) Scrivere una funzione che mi dice se un numero è pari;
+
+// function checkEven(inputNumber) {
+
+//     const isEven = inputNumber % 2 === 0;
+    
+//     return isEven;
+// }
+
+// const checkEvenLambda = inputNumber => inputNumber % 2 === 0;
+
+// const res1 = checkEven(22);
+// console.log(res1);
+// const res2 = checkEven(21);
+// console.log(res2);
+
+// const res3 = checkEvenLambda(221);
+// console.log(res3);
+// const res4 = checkEvenLambda(212);
+// console.log(res4);
+
+// 17) scrivere una funzione che moltiplichi una stringa per un numero
+// es: se inserisco 'cacca' e 3, l'output sarà 'caccacaccacacca'
+
+// function multiplyString(inputString, multiplier){
+
+//     let multipliedString = '';
+
+//     for (let i = 0; i < multiplier; i++) {
+        
+//         //multipliedString = multipliedString + inputString;
+//         multipliedString += inputString;
+
+//     }
+
+//     return multipliedString;
+
+// }
+
+// const multiplyStringLambda = (inputString, multiplier) => inputString.repeat(multiplier);
+
+
+// const res5 = multiplyString('pippo', 3)
+
+// console.log(res5)
+
+// const res6 = multiplyString('cacca', 100)
+
+// console.log(res6)
+
+// const res7 = multiplyStringLambda('basta', 5)
+
+// console.log(res7)
+
+// const res8 = multiplyStringLambda('incubo', 10)
+
+// console.log(res8)
+
+// 18) Scrivi una funzione che dato un numero mi dice se è intero oppure no
+
+// function checkInteger(n) {
+
+//     const isInteger = n % 1 === 0
+
+//     return isInteger;
+
+// }
+
+// const checkIntegerLambda = n => n % 1 === 0;
+
+
+// const res9 = checkInteger(3);
+
+// console.log(res9);
+
+// const res10 = checkInteger(3.14);
+
+// console.log(res10);
+
+// const res11 = checkInteger(30);
+
+// console.log(res11);
+
+// const res12 = checkInteger(0.5);
+
+// console.log(res12);
+
+// 19) Scrivere una funzione che dati in input due numeri ritorni il maggiore;
+// 20) Scrivere una funzione che date in input due stringhe ritorni la più corta;
+// 21) Scrivere una funzione che data in input una stringa ritorni la sua iniziale;
+// 22) scrivere una fuzione che dati in input una stringa e un numero, 
+// logghi la stringa tante volte quante il numereo dato; 
