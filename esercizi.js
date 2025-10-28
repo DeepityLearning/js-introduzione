@@ -315,7 +315,7 @@
 // function checkEven(inputNumber) {
 
 //     const isEven = inputNumber % 2 === 0;
-    
+
 //     return isEven;
 // }
 
@@ -339,7 +339,7 @@
 //     let multipliedString = '';
 
 //     for (let i = 0; i < multiplier; i++) {
-        
+
 //         //multipliedString = multipliedString + inputString;
 //         multipliedString += inputString;
 
@@ -398,7 +398,121 @@
 // console.log(res12);
 
 // 19) Scrivere una funzione che dati in input due numeri ritorni il maggiore;
+
+// function findGreaterNumber(n1, n2) {
+
+//     // let choosenNumber;
+
+//     // if( n1 < n2 ){
+//     //     choosenNumber = n2;
+//     // } else {
+//     //     choosenNumber = n1;
+//     // }
+
+//     // return choosenNumber;
+
+//     if (n1 < n2) {
+//         return n2;
+//     } else {
+//         return n1;
+//     }
+
+// }
+
+
+// console.log(findGreaterNumber(30, 31))
+
+// const first = 50;
+// const second = 100;
+
+// const greater = findGreaterNumber(first, second);
+
+// console.log(greater);
+
+// const findGreaterNumberLambda = (n1, n2) => {
+//     if (n1 < n2) {
+//         return n2;
+//     } else {
+//         return n1;
+//     }
+// }
+
+// const findGreaterNumberLambdaShort = (n1, n2) => n1 < n2 ? n2 : n1;
+
+// function findGreaterNumberShort(n1, n2) {
+//     return n1 < n2 ? n2 : n1;
+// }
+
 // 20) Scrivere una funzione che date in input due stringhe ritorni la più corta;
+
+// function findShortestString(s1, s2){
+
+//     if(s1.length < s2.length){
+//         return s1;
+//     } else {
+//         return s2;
+//     }
+
+// }
+
+// console.log(findShortestString('ciao mamma!', 'ciao nonnina!!'))
+
+
 // 21) Scrivere una funzione che data in input una stringa ritorni la sua iniziale;
-// 22) scrivere una fuzione che dati in input una stringa e un numero, 
-// logghi la stringa tante volte quante il numereo dato; 
+
+// function findFirstChar(str) {
+//     // return str.charAt(0);
+//     return str[0];
+// }
+
+// const findFirstCharLambda = str => str[0];
+
+// console.log(findFirstChar('leaonardo'));
+
+// 22) scrivere una funzione che dati in input una stringa e un numero,
+// logghi la stringa tante volte quante il numereo dato;
+
+// function stringMultiLogger(str, times) {
+
+//     for (let i = 0; i < times; i++) {
+        
+//         console.log(str);
+        
+//     }
+
+// }
+
+// const stringMultiLoggerLambda = (str, times) => {
+
+//     for (let i = 0; i < times; i++) {
+//         console.log(str);  
+//     }
+
+// }
+
+// const result = stringMultiLogger('leonardo', 30);
+
+// console.log(result)
+
+
+//23) You can get the Nth character, or letter, from a string by writing [N] after the string (for example, string[2]). The resulting value will be a string containing only one character (for example, "b"). The first character has position 0, which causes the last one to be found at position string.length - 1. In other words, a two-character string has length 2, and its characters have positions 0 and 1.
+//Write a function called countBs that takes a string as its only argument and returns a number that indicates how many uppercase B characters there are in the string.
+//Next, write a function called countChar that behaves like countBs, except it takes a second argument that indicates the character that is to be counted (rather than counting only uppercase B characters). Rewrite countBs to make use of this new function.
+
+//24) Inversione di un numero
+//Scrivi una funzione invertiNumero che prenda un numero come parametro e restituisca il numero con le cifre invertite (es. 123 → 321).
+
+//25) Tabellina
+//Scrivi una funzione tabellina che prenda un numero come parametro e stampi in console la tabellina di quel numero fino a 10.
+
+//26) Fibonacci
+//Scrivi una funzione fibonacci che prenda un numero N come parametro e restituisca l’N-esimo numero della sequenza di Fibonacci.
+
+//27)  Conteggio vocali
+//Scrivi una funzione contaVocali che prenda una stringa come parametro e restituisca il numero di vocali presenti.
+
+//28) Sconto
+//Scrivi una funzione applicaSconto che prenda due numeri come parametri (prezzo e percentuale di sconto) e restituisca il prezzo scontato.
+
+//29) Conversione gradi
+//Scrivi una funzione convertiGradi che prenda un numero come parametro (gradi Celsius) e restituisca la conversione in Fahrenheit
