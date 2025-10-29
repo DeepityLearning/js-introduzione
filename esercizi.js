@@ -743,11 +743,11 @@ function fiboRecursive(pos) {
 // - Non contiene la parola 'cacca'
 
 function hasSpecialCharacters(str){
-    if (password.includes("!")
-        || password.includes('#')
-        || password.includes('@')
-        || password.includes('$')
-        || password.includes('%')) {
+    if (str.includes("!")
+        || str.includes('#')
+        || str.includes('@')
+        || str.includes('$')
+        || str.includes('%')) {
         return true;
     } else {
         return false;
@@ -801,7 +801,7 @@ function checkPassword(password) {
     //     }
     // }
 
-    
+
     if (isTooShort(password)) {
         return false;
     } else if (!containsUppercaseChar(password)){
