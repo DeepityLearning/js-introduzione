@@ -646,42 +646,42 @@
 //26) Fibonacci
 //Scrivi una funzione fibonacci che prenda un numero N come parametro e restituisca l’N-esimo numero della sequenza di Fibonacci.
 
-function fibo(pos) {
+// function fibo(pos) {
 
-    let first = 0;
-    let second = 1;
+//     let first = 0;
+//     let second = 1;
 
-    if (pos === 1) {
-        return first;
-    } else if (pos === 2){
-        return second;
-    } else if (pos > 2) {
-        let fib;
-        for (let i = 3; i <= pos; i++) {
-            fib = first + second;
-            first = second;
-            second = fib;
-        }
-        return fib;
-    } else {
-        console.log('ERRRRRORE!!')
-    }
+//     if (pos === 1) {
+//         return first;
+//     } else if (pos === 2){
+//         return second;
+//     } else if (pos > 2) {
+//         let fib;
+//         for (let i = 3; i <= pos; i++) {
+//             fib = first + second;
+//             first = second;
+//             second = fib;
+//         }
+//         return fib;
+//     } else {
+//         console.log('ERRRRRORE!!')
+//     }
 
-}
+// }
 
-console.log(fibo(7));
+// console.log(fibo(7));
 
-function fiboRecursive(pos) {
+// function fiboRecursive(pos) {
     
-    if (pos === 0) {
-        return 0;
-    } else if (pos === 1){
-        return 1;
-    } else {
-        return fiboRecursive(pos - 1) + fiboRecursive(pos - 2);
-    }
+//     if (pos === 0) {
+//         return 0;
+//     } else if (pos === 1){
+//         return 1;
+//     } else {
+//         return fiboRecursive(pos - 1) + fiboRecursive(pos - 2);
+//     }
 
-}
+// }
 
 //27)  Conteggio vocali
 //Scrivi una funzione contaVocali che prenda una stringa come parametro e restituisca il numero di vocali presenti.
@@ -742,85 +742,85 @@ function fiboRecursive(pos) {
 // - Contiene almeno un carattere speciale tra questi '!#@$%'
 // - Non contiene la parola 'cacca'
 
-function hasSpecialCharacters(str){
-    if (str.includes("!")
-        || str.includes('#')
-        || str.includes('@')
-        || str.includes('$')
-        || str.includes('%')) {
-        return true;
-    } else {
-        return false;
-    }
-}
+// function hasSpecialCharacters(str){
+//     if (str.includes("!")
+//         || str.includes('#')
+//         || str.includes('@')
+//         || str.includes('$')
+//         || str.includes('%')) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
-function containsUppercaseChar(str){
-    if (str.toLowerCase() === str) {
-        return false;
-    } else {
-        return true;
-    }
-}
+// function containsUppercaseChar(str){
+//     if (str.toLowerCase() === str) {
+//         return false;
+//     } else {
+//         return true;
+//     }
+// }
 
-function isTooShort(str){
-    if(str.length < 8){
-        return true;
-    } else {
-        return false;
-    }
-}
+// function isTooShort(str){
+//     if(str.length < 8){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
-function containsCacca(str){
-    if(str.includes('cacca')){
-        return true;
-    } else {
-        return false;
-    }
-}
+// function containsCacca(str){
+//     if(str.includes('cacca')){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
-function checkPassword(password) {
-    // if(password.length < 8){
-    //     return false;
-    // } else {
-    //     if(password.toLowerCase() === password){
-    //         return false;
-    //     } else {
-    //         if (password.includes("!")
-    //         || password.includes('#')
-    //         || password.includes('@')
-    //         || password.includes('$')
-    //         || password.includes('%')) {
-    //             if (password.includes('cacca')) {
-    //                 return false;
-    //             } else {
-    //                 return true;
-    //             }
-    //         } else {
-    //             return false;
-    //         }
-    //     }
-    // }
+// function checkPassword(password) {
+//     // if(password.length < 8){
+//     //     return false;
+//     // } else {
+//     //     if(password.toLowerCase() === password){
+//     //         return false;
+//     //     } else {
+//     //         if (password.includes("!")
+//     //         || password.includes('#')
+//     //         || password.includes('@')
+//     //         || password.includes('$')
+//     //         || password.includes('%')) {
+//     //             if (password.includes('cacca')) {
+//     //                 return false;
+//     //             } else {
+//     //                 return true;
+//     //             }
+//     //         } else {
+//     //             return false;
+//     //         }
+//     //     }
+//     // }
 
 
-    if (isTooShort(password)) {
-        return false;
-    } else if (!containsUppercaseChar(password)){
-        return false;
-    } else if (!hasSpecialCharacters(password)){
-        return false;
-    } else if (containsCacca(password)) {
-        return false;
-    } else {
-        return true;
-    }
+//     if (isTooShort(password)) {
+//         return false;
+//     } else if (!containsUppercaseChar(password)){
+//         return false;
+//     } else if (!hasSpecialCharacters(password)){
+//         return false;
+//     } else if (containsCacca(password)) {
+//         return false;
+//     } else {
+//         return true;
+//     }
 
  
 
-}
+// }
 
 
-console.log(checkPassword('caccacaccacacca'));
-console.log(checkPassword('Leonardo!'));
+// console.log(checkPassword('caccacaccacacca'));
+// console.log(checkPassword('Leonardo!'));
 
 // 31) Somma dei numeri fino a n
 // Scrivi una funzione sommaFinoAN(n) che restituisce la somma dei numeri da 1 a n.
