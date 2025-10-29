@@ -475,9 +475,9 @@
 // function stringMultiLogger(str, times) {
 
 //     for (let i = 0; i < times; i++) {
-        
+
 //         console.log(str);
-        
+
 //     }
 
 // }
@@ -499,23 +499,241 @@
 //Write a function called countBs that takes a string as its only argument and returns a number that indicates how many uppercase B characters there are in the string.
 //Next, write a function called countChar that behaves like countBs, except it takes a second argument that indicates the character that is to be counted (rather than counting only uppercase B characters). Rewrite countBs to make use of this new function.
 
+
+// function countBs(str) {
+
+//     let counter = 0;
+
+//     for (let i = 0; i < str.length; i++) {
+
+//         const selectedChar = str[i];
+//         const lowerChar = selectedChar.toLowerCase()
+
+//         if (lowerChar === 'b') {
+//             counter++
+//         }
+
+//     }
+
+//     return counter;
+// }
+
+// console.log(countBs('babbeo')) //->3
+// console.log(countBs('leonardo')) //->0
+// console.log(countBs('BAMBINO')) //->2
+
+// function countChar(str, char) {
+
+//     let counter = 0;
+
+//     for (let i = 0; i < str.length; i++) {
+
+//         const selectedChar = str[i];
+
+//         const selectedLower = selectedChar.toLowerCase();
+//         const charLower = char.toLowerCase();
+
+//         if (selectedLower === charLower) {
+//             counter++
+//         }
+
+//     }
+
+//     return counter;
+
+// }
+
+// console.log(countChar('mammamia', 'm')) //->4
+// console.log(countChar('mammamia', 'i')) //->1
+// console.log(countChar('leonardo', 'L')) //->1
+
+
+// function countCharSensitive(str, char, isSensitive) {
+
+//     let counter = 0;
+
+//     for (let i = 0; i < str.length; i++) {
+
+//         let selectedChar = str[i];
+
+//         if (!isSensitive) {
+//             selectedChar = selectedChar.toLowerCase();
+//             char = char.toLowerCase()
+//         }
+
+//         if (selectedChar === char) {
+//             counter++
+//         }
+
+//     }
+
+//     return counter;
+
+// }
+
+// console.log(countCharSensitive('leonardo', 'L', false)) //->1
+// console.log(countCharSensitive('leonardo', 'L', true)) //->0
+
+
 //24) Inversione di un numero
 //Scrivi una funzione invertiNumero che prenda un numero come parametro e restituisca il numero con le cifre invertite (es. 123 → 321).
+
+// function reverseNumber(nbr) {
+
+//     const nbrToString = String(nbr);
+    
+//     let reversed = '';
+
+//     for (let i = nbrToString.length - 1 ; i >= 0 ; i--) {
+        
+//         const char = nbrToString[i];
+//         reversed += char;
+        
+//     }
+
+//     const reversedToNumber = Number(reversed);
+//     return reversedToNumber;
+// }
+
+// console.log(reverseNumber(123345))
 
 //25) Tabellina
 //Scrivi una funzione tabellina che prenda un numero come parametro e stampi in console la tabellina di quel numero fino a 10.
 
+// function tabellina(nbr){
+//     console.log(nbr * 1);
+//     console.log(nbr * 2);
+//     console.log(nbr * 3);
+//     console.log(nbr * 4);
+//     console.log(nbr * 5);
+//     console.log(nbr * 6);
+//     console.log(nbr * 7);
+//     console.log(nbr * 8);
+//     console.log(nbr * 9);
+//     console.log(nbr * 10);
+// }
+
+// tabellina(3);
+// tabellina(10);
+
+// function tabellinaEvolution(nbr){
+//     for (let i = 1; i < 11; i++) {
+//         const result = nbr * i;
+//         console.log(result);
+//     }
+// }
+
+// tabellinaEvolution(3);
+// tabellinaEvolution(10);
+
+// function tabellinaString(nbr){
+
+//     let tabellinaStr = '';
+
+//     for (let i = 1; i < 11; i++) {
+//         const result = nbr * i;
+//         tabellinaStr += result;
+//         tabellinaStr += ' ';
+//     }
+
+//     return tabellinaStr;
+// }
+
+// for (let i = 1; i < 11; i++) {
+//     console.log(tabellinaString(i))
+// }
+
 //26) Fibonacci
 //Scrivi una funzione fibonacci che prenda un numero N come parametro e restituisca l’N-esimo numero della sequenza di Fibonacci.
+
+function fibo(pos) {
+
+    let first = 0;
+    let second = 1;
+
+    if (pos === 1) {
+        return first;
+    } else if (pos === 2){
+        return second;
+    } else if (pos > 2) {
+        let fib;
+        for (let i = 3; i <= pos; i++) {
+            fib = first + second;
+            first = second;
+            second = fib;
+        }
+        return fib;
+    } else {
+        console.log('ERRRRRORE!!')
+    }
+
+}
+
+console.log(fibo(7));
+
+function fiboRecursive(pos) {
+    
+    if (pos === 0) {
+        return 0;
+    } else if (pos === 1){
+        return 1;
+    } else {
+        return fiboRecursive(pos - 1) + fiboRecursive(pos - 2);
+    }
+
+}
 
 //27)  Conteggio vocali
 //Scrivi una funzione contaVocali che prenda una stringa come parametro e restituisca il numero di vocali presenti.
 
+// function countVowels(str) {
+
+//     let counter = 0;
+
+//     for (let i = 0; i < str.length; i++) {
+
+//         const selectedChar = str[i];
+//         const lowerChar = selectedChar.toLowerCase()
+
+//         if (lowerChar === 'a' 
+//             || lowerChar === 'e' 
+//             || lowerChar === 'i' 
+//             || lowerChar === 'o' 
+//             || lowerChar === 'u') {
+//             counter++
+//         }
+
+//     }
+
+//     return counter;
+// }
+
+// console.log(countVowels('aiuola'))
+
 //28) Sconto
 //Scrivi una funzione applicaSconto che prenda due numeri come parametri (prezzo e percentuale di sconto) e restituisca il prezzo scontato.
 
+// function applySale(price, salePercent) {
+
+//     const sale = price / 100 * salePercent;
+//     const priceWithSale = price - sale;
+
+//     return priceWithSale;
+    
+// }
+
+// console.log(applySale(100, 20));
+
 //29) Conversione gradi
 //Scrivi una funzione convertiGradi che prenda un numero come parametro (gradi Celsius) e restituisca la conversione in Fahrenheit
+
+// function celsiusToFahrenheit(c){
+
+//     const f = (c * (9 / 5)) + 32;
+//     return f; 
+// }
+
+// console.log(celsiusToFahrenheit(30));
 
 //30) Verifica password
 //Scrivi una funzione verificaPassword che prenda una stringa e restituisca true se:
@@ -523,3 +741,83 @@
 // - Contiene almeno una lettera maiuscola
 // - Contiene almeno un carattere speciale tra questi '!#@$%'
 // - Non contiene la parola 'cacca'
+
+function hasSpecialCharacters(str){
+    if (password.includes("!")
+        || password.includes('#')
+        || password.includes('@')
+        || password.includes('$')
+        || password.includes('%')) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function containsUppercaseChar(str){
+    if (str.toLowerCase() === str) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function isTooShort(str){
+    if(str.length < 8){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function containsCacca(str){
+    if(str.includes('cacca')){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function checkPassword(password) {
+    // if(password.length < 8){
+    //     return false;
+    // } else {
+    //     if(password.toLowerCase() === password){
+    //         return false;
+    //     } else {
+    //         if (password.includes("!")
+    //         || password.includes('#')
+    //         || password.includes('@')
+    //         || password.includes('$')
+    //         || password.includes('%')) {
+    //             if (password.includes('cacca')) {
+    //                 return false;
+    //             } else {
+    //                 return true;
+    //             }
+    //         } else {
+    //             return false;
+    //         }
+    //     }
+    // }
+
+    
+    if (isTooShort(password)) {
+        return false;
+    } else if (!containsUppercaseChar(password)){
+        return false;
+    } else if (!hasSpecialCharacters(password)){
+        return false;
+    } else if (containsCacca(password)) {
+        return false;
+    } else {
+        return true;
+    }
+
+ 
+
+}
+
+
+console.log(checkPassword('caccacaccacacca'));
+console.log(checkPassword('Leonardo!'));
