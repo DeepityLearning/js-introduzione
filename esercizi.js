@@ -826,35 +826,35 @@
 // Scrivi una funzione sommaFinoAN(n) che restituisce la somma dei numeri da 1 a n.
 // sommaFinoAN(5) -> 1 + 2 + 3 + 4 + 5 -> 15
 
-function sommaFinoAN(nbr){
+// function sommaFinoAN(nbr){
 
-    let sum = 0
+//     let sum = 0
 
-    for (let i = 1; i <= nbr; i++) {
-        sum = sum + i;
-    }
+//     for (let i = 1; i <= nbr; i++) {
+//         sum = sum + i;
+//     }
 
-    return sum;
-}
+//     return sum;
+// }
 
-console.log(sommaFinoAN(5))
-console.log(sommaFinoAN(50))
+// console.log(sommaFinoAN(5))
+// console.log(sommaFinoAN(50))
 
 // 32) Conteggio cifre
 // Scrivi una funzione contaCifre(num) che restituisce il numero di cifre di un numero
 
 
-function contaCifre(nbr){
+// function contaCifre(nbr){
 
-    let nbrToString = String(nbr);
-           // '1245'
-    let length = nbrToString.length;
-           // 4
-    return length;
-}
+//     let nbrToString = String(nbr);
+//            // '1245'
+//     let length = nbrToString.length;
+//            // 4
+//     return length;
+// }
 
-console.log(contaCifre(5))// -> 1
-console.log(contaCifre(1245))// -> 4
+// console.log(contaCifre(5))// -> 1
+// console.log(contaCifre(1245))// -> 4
 
 
 // 33) Somma delle cifre
@@ -862,130 +862,130 @@ console.log(contaCifre(1245))// -> 4
 // sommaCifre(5) -> 5
 // sommaCifre(1245) -> 12
 
-function sommaCifre(nbr){
-                  //1245
-    //debugger;
+// function sommaCifre(nbr){
+//                   //1245
+//     //debugger;
 
-    let nbrToString = String(nbr);
-        //'1245'
+//     let nbrToString = String(nbr);
+//         //'1245'
         
-    let sum = 0
+//     let sum = 0
 
-    for (let i = 0; i < nbrToString.length; i++) {
-                            //4
+//     for (let i = 0; i < nbrToString.length; i++) {
+//                             //4
 
-        const nChar = nbrToString[i];
-            //'5'                //3
+//         const nChar = nbrToString[i];
+//             //'5'                //3
 
-        const n = Number(nChar);
-            //5
+//         const n = Number(nChar);
+//             //5
 
-        sum = sum + n;
-        //12   //7 //5
-    }
+//         sum = sum + n;
+//         //12   //7 //5
+//     }
 
-    return sum;
-          //12
-}
+//     return sum;
+//           //12
+// }
 
-console.log(sommaCifre(1245));
+// console.log(sommaCifre(1245));
 
 // 34) Conversione valuta
 // Scrivi una funzione euroToDollaro(euro) che converte un importo in euro in dollari (1 euro = 1.15 dollari).
 
-function euroToDollaro(euro) {
+// function euroToDollaro(euro) {
 
-    const dollaro = euro * 1.15;
+//     const dollaro = euro * 1.15;
 
-    return dollaro;
-}
+//     return dollaro;
+// }
 
-console.log(euroToDollaro(5));
+// console.log(euroToDollaro(5));
 
 
 // 35) Calcolo area rettangolo
 // Scrivi una funzione areaRettangolo(base, altezza) che restituisce l’area di un rettangolo.
 
-function areaRettangolo(base, altezza){
+// function areaRettangolo(base, altezza){
 
-    const area = base * altezza;
+//     const area = base * altezza;
 
-    return area;
+//     return area;
 
-}
+// }
 
-console.log(areaRettangolo(5, 20));
+// console.log(areaRettangolo(5, 20));
 
 // 36) Calcolo media
 // Scrivi una funzione media(a, b, c) che restituisce la media di tre numeri.
 
-function media(a, b, c){
+// function media(a, b, c){
 
-    const sum = a + b + c;
+//     const sum = a + b + c;
 
-    const mean = sum / 3;
+//     const mean = sum / 3;
 
-    return mean;
-}
+//     return mean;
+// }
 
-console.log(media(5, 20, 11));
+// console.log(media(5, 20, 11));
 
 // 37) Generatore di password casuale
 // Scrivi una funzione generaPasswordCasuale() che restituisce una password di 8 caratteri usando solo lettere maiuscole e numeri (usa Math.random())
 
-function generaPasswordCasuale() {
+// function generaPasswordCasuale() {
 
-    const availableCharacters = 'ABCDEFGHIJKLMNOPQRSTUVXYZ0123456789';
-                               //012345678..
-    let password = '';
+//     const availableCharacters = 'ABCDEFGHIJKLMNOPQRSTUVXYZ0123456789';
+//                                //012345678..
+//     let password = '';
     
-    for (let i = 0; i < 8; i++) {
+//     for (let i = 0; i < 8; i++) {
 
-        const numeroRandomico = Math.random();
+//         const numeroRandomico = Math.random();
 
-        const position = numeroRandomico * (availableCharacters.length - 1);
+//         const position = numeroRandomico * (availableCharacters.length - 1);
 
-        const roundedPosition = Math.round(position);
+//         const roundedPosition = Math.round(position);
 
-        password = password + availableCharacters[roundedPosition];
+//         password = password + availableCharacters[roundedPosition];
         
-    }
+//     }
 
-    return password;
-}
+//     return password;
+// }
 
-console.log(generaPasswordCasuale())
+// console.log(generaPasswordCasuale())
 
 // 38) Potenza con ciclo
 // Scrivi una funzione potenzaCiclo(base, esponente) che calcola la potenza usando un ciclo.
-function potenzaCiclo(base, esponente) {
+// function potenzaCiclo(base, esponente) {
 
-    if (esponente === 0) {
-        return 1;
-    }
+//     if (esponente === 0) {
+//         return 1;
+//     }
 
-    // let pow = 1;
+//     // let pow = 1;
 
-    // for (let i = 0; i < esponente; i++) {
+//     // for (let i = 0; i < esponente; i++) {
 
-    //     pow = pow * base;
+//     //     pow = pow * base;
 
-    // }
+//     // }
     
-    // return pow;
+//     // return pow;
 
-    let pow = base;
+//     let pow = base;
 
-    for (let i = 1; i < esponente; i++) {
+//     for (let i = 1; i < esponente; i++) {
 
-        pow = pow * base;
+//         pow = pow * base;
 
-    }
+//     }
     
-    return pow;
-}
+//     return pow;
+// }
 
-console.log(potenzaCiclo(2, 5))
+// console.log(potenzaCiclo(2, 5))
 
 // 39) Scrivi un validatore di email con queste regole:
 // -deve contenere una @
@@ -993,97 +993,125 @@ console.log(potenzaCiclo(2, 5))
 // -le parti di testo prima della @ e tra la @ e il punto devono almeno avere tre lettere
 // -il punto non può essere l'ultimo carattere
 
-function constainsAt(email) {
-    if(email.includes('@')){
-        return true;
-    } else {
-        return false;
-    }
-}
+// function constainsAt(email) {
+//     if(email.includes('@')){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
-function containsDotAfterAt(email) {
-    const dotPosition = email.indexOf('.');
-    if (dotPosition === -1) {
-        return false;
-    }
-    const atPosition = email.indexOf('@');
-    if (dotPosition > atPosition) {
-        return true;
-    } else {
-        return false;
-    }
-}
+// function containsDotAfterAt(email) {
+//     const dotPosition = email.indexOf('.');
+//     if (dotPosition === -1) {
+//         return false;
+//     }
+//     const atPosition = email.indexOf('@');
+//     if (dotPosition > atPosition) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
-function firstAndSecondPartlengthIsThreeOrMore(email) {
+// function firstAndSecondPartlengthIsThreeOrMore(email) {
 
-    const atPosition = email.indexOf('@');
-    const firstPart = email.substring(0, atPosition);
+//     const atPosition = email.indexOf('@');
+//     const firstPart = email.substring(0, atPosition);
 
-    const dotPosition = email.indexOf('.');
-    const secondPart = email.substring(atPosition + 1, dotPosition);
+//     const dotPosition = email.indexOf('.');
+//     const secondPart = email.substring(atPosition + 1, dotPosition);
 
-    if (firstPart.length >= 3 && secondPart.length >=3) {
-        return true;
-    } else {
-        return false;
-    }
-}
+//     if (firstPart.length >= 3 && secondPart.length >=3) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
-function lastCharMustBeDifferentFromDot(email) {
-    const lastPosition = email.length - 1;
-    const lastChar = email[lastPosition];
+// function lastCharMustBeDifferentFromDot(email) {
+//     const lastPosition = email.length - 1;
+//     const lastChar = email[lastPosition];
 
-    if (lastChar === '.') {
-        return false;
-    } else {
-        return true;
-    }
-}
+//     if (lastChar === '.') {
+//         return false;
+//     } else {
+//         return true;
+//     }
+// }
 
-function emailValidator(email) {
-    if (!constainsAt(email)) {
-        return false
-    } else if (!containsDotAfterAt(email)){
-        return false
-    } else if (!firstAndSecondPartlengthIsThreeOrMore(email)){
-        return false
-    } else if (!lastCharMustBeDifferentFromDot(email)){
-        return false
-    } else {
-        return true;
-    }
-}
+// function emailValidator(email) {
+//     if (!constainsAt(email)) {
+//         return false
+//     } else if (!containsDotAfterAt(email)){
+//         return false
+//     } else if (!firstAndSecondPartlengthIsThreeOrMore(email)){
+//         return false
+//     } else if (!lastCharMustBeDifferentFromDot(email)){
+//         return false
+//     } else {
+//         return true;
+//     }
+// }
 
 
 
-console.log(emailValidator('ciaociao'))
-console.log(emailValidator('ciao@ciao'))
-console.log(emailValidator('ci.ao@ciao'))
-console.log(emailValidator('ciao@ciao.'))
-console.log(emailValidator('ciao@cia.o'))
+// console.log(emailValidator('ciaociao'))
+// console.log(emailValidator('ciao@ciao'))
+// console.log(emailValidator('ci.ao@ciao'))
+// console.log(emailValidator('ciao@ciao.'))
+// console.log(emailValidator('ciao@cia.o'))
 
 
 // 40) crea un converitore tra italiano e farfallino(https://it.wikipedia.org/wiki/Alfabeto_farfallino)
 
-function farfallinoTranslator(str) {
+// function farfallinoTranslator(str) {
     
-    const vowels = 'aeiou';
+//     const vowels = 'aeiou';
 
-    let farfallinoStr = '';
+//     let farfallinoStr = '';
 
-    for (let i = 0; i < str.length; i++) {
+//     for (let i = 0; i < str.length; i++) {
 
-        const char = str[i]
+//         const char = str[i]
 
-        if (vowels.includes(char.toLowerCase())) {
-            farfallinoStr = farfallinoStr + char + 'f' + char;
-        } else {
-            farfallinoStr = farfallinoStr + char;
-        }
-    }
-    return farfallinoStr;
+//         if (vowels.includes(char.toLowerCase())) {
+//             farfallinoStr = farfallinoStr + char + 'f' + char;
+//         } else {
+//             farfallinoStr = farfallinoStr + char;
+//         }
+//     }
+//     return farfallinoStr;
+// }
+
+// console.log(farfallinoTranslator('leonardo'))
+// console.log(farfallinoTranslator('LEONARDO'))
+// console.log(farfallinoTranslator('viva la pausa!!'))
+
+
+const pippo = [1, 2, 4, 56, 78, 11, -123, 3, -23, 2, 22, 4];
+
+//41) creare una funzione che dato un array di numeri li eleva tutti al quadrato
+
+function squareArray(nbrArray) {
+    
 }
 
-console.log(farfallinoTranslator('leonardo'))
-console.log(farfallinoTranslator('LEONARDO'))
-console.log(farfallinoTranslator('viva la pausa!!'))
+console.log(squareArray(pippo)) //-> [1, 4, 16, 3136, ....]
+
+
+//42) creare una funzione che dato un array di numeri li eleva al quadrato solo i numeri dispari
+
+function squareOddArray(nbrArray) {
+    
+}
+
+console.log(squareOddArray(pippo)) //-> [1, 2, 4, 56, 78, 121, 15129, 9, 529, 2, 22, 4]
+
+//42) creare una funzione che dato un array di numeri moltiplichi per due quelli positivi e divida per due i negativi
+
+function multiplyPoisitiveAndDivideNegative(nbrArray) {
+    
+}
+
+console.log(multiplyPoisitiveAndDivideNegative(pippo)) //-> [2, 4, 8, 112, 156, 22, -61.5, 6, -11.5, 4, 44, 8];
