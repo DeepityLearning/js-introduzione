@@ -1089,29 +1089,146 @@
 // console.log(farfallinoTranslator('viva la pausa!!'))
 
 
-const pippo = [1, 2, 4, 56, 78, 11, -123, 3, -23, 2, 22, 4];
+//const pippo = [1, 2, 4, 56, 78, 11, -123, 3, -23, 2, 22, 4];
 
 //41) creare una funzione che dato un array di numeri li eleva tutti al quadrato
 
-function squareArray(nbrArray) {
-    
-}
+// function squareArray(nbrArray) {
 
-console.log(squareArray(pippo)) //-> [1, 4, 16, 3136, ....]
+//     const newArray = [];
+
+
+//     for (let i = 0; i < nbrArray.length; i++) {
+
+//         const element = nbrArray[i];
+
+//         const square = element * element;
+
+//         newArray.push(square);
+        
+//     }
+
+    
+//     // for (const nbr of nbrArray) {
+
+//     //     const square = nbr ** 2;
+
+//     //     newArray.push(square);
+
+//     // }
+
+//     return newArray;
+// }
+
+//console.log(squareArray(pippo)) //-> [1, 4, 16, 3136, ....]
 
 
 //42) creare una funzione che dato un array di numeri li eleva al quadrato solo i numeri dispari
 
-function squareOddArray(nbrArray) {
-    
-}
+// function squareOddArray(nbrArray) {
 
-console.log(squareOddArray(pippo)) //-> [1, 2, 4, 56, 78, 121, 15129, 9, 529, 2, 22, 4]
+//         const newArray = [];
+
+
+//     for (let i = 0; i < nbrArray.length; i++) {
+
+//         const element = nbrArray[i];
+
+//         if(element % 2 === 0){
+
+//             newArray.push(element);
+
+//         } else {
+
+//             const square = element * element;
+
+//             newArray.push(square);
+            
+//         }
+
+//     }
+
+//     return newArray;
+
+    
+// }
+
+// console.log(squareOddArray(pippo)) //-> [1, 2, 4, 56, 78, 121, 15129, 9, 529, 2, 22, 4]
 
 //42) creare una funzione che dato un array di numeri moltiplichi per due quelli positivi e divida per due i negativi
 
-function multiplyPoisitiveAndDivideNegative(nbrArray) {
-    
-}
+// function multiplyPoisitiveAndDivideNegative(nbrArray) {
 
-console.log(multiplyPoisitiveAndDivideNegative(pippo)) //-> [2, 4, 8, 112, 156, 22, -61.5, 6, -11.5, 4, 44, 8];
+//         const newArray = [];
+
+
+//     for (let i = 0; i < nbrArray.length; i++) {
+
+//         const element = nbrArray[i];
+
+
+//         if (element >= 0) {
+
+//             const multiplied = element * 2;
+
+//             newArray.push(multiplied);
+
+//         } else {
+
+//             const divided = element / 2;
+
+//             newArray.push(divided);
+
+//         }
+
+        
+//     }
+
+//     return newArray;
+    
+// }
+
+// console.log(multiplyPoisitiveAndDivideNegative(pippo)) //-> [2, 4, 8, 112, 156, 22, -61.5, 6, -11.5, 4, 44, 8];
+
+
+
+
+// 43) Trova il Minimo
+// Scrivi una funzione trovaMinimo(array) che restituisce il numero più piccolo in un array di numeri.
+
+
+
+// 44) Inverti Array con un ciclo
+// Scrivi una funzione invertiArray(array) che restituisce un nuovo array con gli elementi in ordine inverso.
+
+
+
+// 45) Maiuscolo Tutte le Parole
+// Scrivi una funzione maiuscoloTutto(array) che restituisce un nuovo array con tutte le stringhe in maiuscolo.
+
+
+
+// 46) Somma Righe Matrice
+// Scrivi una funzione sommaRighe(matrice) che restituisce un array con la somma degli elementi di ogni riga.
+
+
+
+// 47) Conta Occorrenze
+// Scrivi una funzione contaOccorrenze(array, elemento) che conta quante volte un elemento appare in un array
+
+
+
+// 48) Filtra indice pari
+// Scrivi una funzione filtraIndicePari(array) che tiene tutti gli elementi in posizione dispari
+
+
+
+// 49) Somma pari 
+// Scrivi una funzione sommaPari(array) che somma tutti i numeri pari
+
+
+// 50) trova lunghezze
+// Scrivi una funzione trovaLunghezzeParola(array) che restituisce un array delle lunghezze(numeri) delle stringhe che compongono l'array in input
+
+
+
