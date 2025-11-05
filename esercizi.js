@@ -236,16 +236,16 @@
 // Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a "#" character. The characters should form a chessboard.
 // Passing this string to console.log should show something like this:
 //  # # # #
-// # # # # 
+// # # # #
 //  # # # #
-// # # # # 
+// # # # #
 //  # # # #
-// # # # # 
+// # # # #
 //  # # # #
 // # # # #
 //When you have a program that generates this pattern, define a binding size = 8 and change the program so that it works for any size, outputting a grid of the given width and height.
 
-// for (let i = 0; i < 8; i++) { 
+// for (let i = 0; i < 8; i++) {
 //     if (i % 2 === 0) {
 //         console.log(' # # # #');
 //     } else {
@@ -256,7 +256,7 @@
 
 // let chessboard = '';
 
-// for (let i = 0; i < 8; i++) { 
+// for (let i = 0; i < 8; i++) {
 //     if (i % 2 === 0) {
 //         chessboard = chessboard + ' # # # #\n';
 //     } else {
@@ -485,7 +485,7 @@
 // const stringMultiLoggerLambda = (str, times) => {
 
 //     for (let i = 0; i < times; i++) {
-//         console.log(str);  
+//         console.log(str);
 //     }
 
 // }
@@ -581,14 +581,14 @@
 // function reverseNumber(nbr) {
 
 //     const nbrToString = String(nbr);
-    
+
 //     let reversed = '';
 
 //     for (let i = nbrToString.length - 1 ; i >= 0 ; i--) {
-        
+
 //         const char = nbrToString[i];
 //         reversed += char;
-        
+
 //     }
 
 //     const reversedToNumber = Number(reversed);
@@ -672,7 +672,7 @@
 // console.log(fibo(7));
 
 // function fiboRecursive(pos) {
-    
+
 //     if (pos === 0) {
 //         return 0;
 //     } else if (pos === 1){
@@ -695,10 +695,10 @@
 //         const selectedChar = str[i];
 //         const lowerChar = selectedChar.toLowerCase()
 
-//         if (lowerChar === 'a' 
-//             || lowerChar === 'e' 
-//             || lowerChar === 'i' 
-//             || lowerChar === 'o' 
+//         if (lowerChar === 'a'
+//             || lowerChar === 'e'
+//             || lowerChar === 'i'
+//             || lowerChar === 'o'
 //             || lowerChar === 'u') {
 //             counter++
 //         }
@@ -719,7 +719,7 @@
 //     const priceWithSale = price - sale;
 
 //     return priceWithSale;
-    
+
 // }
 
 // console.log(applySale(100, 20));
@@ -730,7 +730,7 @@
 // function celsiusToFahrenheit(c){
 
 //     const f = (c * (9 / 5)) + 32;
-//     return f; 
+//     return f;
 // }
 
 // console.log(celsiusToFahrenheit(30));
@@ -814,7 +814,7 @@
 //         return true;
 //     }
 
- 
+
 
 // }
 
@@ -868,7 +868,7 @@
 
 //     let nbrToString = String(nbr);
 //         //'1245'
-        
+
 //     let sum = 0
 
 //     for (let i = 0; i < nbrToString.length; i++) {
@@ -938,7 +938,7 @@
 //     const availableCharacters = 'ABCDEFGHIJKLMNOPQRSTUVXYZ0123456789';
 //                                //012345678..
 //     let password = '';
-    
+
 //     for (let i = 0; i < 8; i++) {
 
 //         const numeroRandomico = Math.random();
@@ -948,7 +948,7 @@
 //         const roundedPosition = Math.round(position);
 
 //         password = password + availableCharacters[roundedPosition];
-        
+
 //     }
 
 //     return password;
@@ -971,7 +971,7 @@
 //     //     pow = pow * base;
 
 //     // }
-    
+
 //     // return pow;
 
 //     let pow = base;
@@ -981,7 +981,7 @@
 //         pow = pow * base;
 
 //     }
-    
+
 //     return pow;
 // }
 
@@ -1066,7 +1066,7 @@
 // 40) crea un converitore tra italiano e farfallino(https://it.wikipedia.org/wiki/Alfabeto_farfallino)
 
 // function farfallinoTranslator(str) {
-    
+
 //     const vowels = 'aeiou';
 
 //     let farfallinoStr = '';
@@ -1105,10 +1105,10 @@
 //         const square = element * element;
 
 //         newArray.push(square);
-        
+
 //     }
 
-    
+
 //     // for (const nbr of nbrArray) {
 
 //     //     const square = nbr ** 2;
@@ -1143,14 +1143,14 @@
 //             const square = element * element;
 
 //             newArray.push(square);
-            
+
 //         }
 
 //     }
 
 //     return newArray;
 
-    
+
 // }
 
 // console.log(squareOddArray(pippo)) //-> [1, 2, 4, 56, 78, 121, 15129, 9, 529, 2, 22, 4]
@@ -1181,20 +1181,39 @@
 
 //         }
 
-        
+
 //     }
 
 //     return newArray;
-    
+
 // }
 
 // console.log(multiplyPoisitiveAndDivideNegative(pippo)) //-> [2, 4, 8, 112, 156, 22, -61.5, 6, -11.5, 4, 44, 8];
 
+const numberArray = [2, 4, 8, 112, 156, 22, -61.5, 6, -11.5, 4, 44, 8, 4];
 
+const stringArray = ['pizza', 'spaghetti', 'frittata', 'lasagne'];
 
-
+//const numberArray2 = [5, 7, 9]
 // 43) Trova il Minimo
 // Scrivi una funzione trovaMinimo(array) che restituisce il numero più piccolo in un array di numeri.
+// function trovaMinimo(array) {
+
+//     let min = array[0];
+
+//     for (let i = 1; i < array.length; i++) {
+//         const element = array[i];
+
+//         if (element < min) {
+//             min = element;
+//         }
+
+//     }
+
+//     return min;
+// }
+
+// console.log(trovaMinimo(numberArray));
 
 
 
@@ -1203,32 +1222,212 @@
 
 
 
+// function invertiArray(array){
+
+//     const newArray = [];
+
+//     for (let i = 0; i < array.length; i++) {
+
+//         const element = array[(array.length - 1) - i];
+
+//         newArray.push(element)
+
+//     }
+
+//     return newArray;
+// }
+
+// function invertiArray2(array){
+
+//     const newArray = [];
+
+//     for (let i = array.length - 1; i >= 0; i--) {
+
+//         const element = array[i];
+
+//         newArray.push(element)
+
+//     }
+
+//     return newArray;
+// }
+
+// function invertiArray3(array){
+
+//     const newArray = [];
+
+//     for (let i = 0; i < array.length; i++) {
+
+//         const element = array[i];
+
+//         newArray.unshift(element)
+
+//     }
+
+//     return newArray;
+// }
+
+
+// console.log(invertiArray(stringArray));
+// console.log(invertiArray2(stringArray));
+// console.log(invertiArray3(stringArray));
+
+
 // 45) Maiuscolo Tutte le Parole
 // Scrivi una funzione maiuscoloTutto(array) che restituisce un nuovo array con tutte le stringhe in maiuscolo.
 
+// function maiuscoloTutto(array){
+
+//     const newArray = [];
+
+//     for (let i = 0; i < array.length; i++) {
+
+//         const selectedString = array[i];
+
+//         const upperCase = selectedString.toUpperCase();
+
+//         newArray.push(upperCase);
+//     }
+
+//     return newArray;
+
+// }
+
+// console.log(maiuscoloTutto(stringArray));
 
 
 // 46) Somma Righe Matrice
 // Scrivi una funzione sommaRighe(matrice) che restituisce un array con la somma degli elementi di ogni riga.
 
+// const superArray = [[1, 2, 3, 6],
+// [1, 1, 1],
+// [3, 2, 1, 2, 5]];
+
+// function sommaRighe(matrice) {
+
+//     const newArray = [];
+
+//     for (let rowNumber = 0; rowNumber < matrice.length; rowNumber++) {
+
+//         const row = matrice[rowNumber];
+//         let rowSum = 0;
+
+//         for (let columnNumber = 0; columnNumber < row.length; columnNumber++) {
+
+//             const cell = row[columnNumber]
+//             rowSum = rowSum + cell;
+//         }
+//         newArray.push(rowSum);
+//     }
+//     return newArray;
+// }
+// console.log(sommaRighe(superArray))
 
 
 // 47) Conta Occorrenze
 // Scrivi una funzione contaOccorrenze(array, elemento) che conta quante volte un elemento appare in un array
 
+// function contaOccorrenze(array, elemento){
 
+//     let counter = 0;
+
+//     for (let i = 0; i < array.length; i++) {
+
+//         const selected = array[i];
+
+//         if (selected === elemento) {
+//             counter++;
+//         }
+
+//     }
+
+//     return counter;
+// }
+
+// console.log(contaOccorrenze(numberArray, 10000));
+// console.log(contaOccorrenze(numberArray, 4));
+// console.log(contaOccorrenze(numberArray, 8));
+// console.log(contaOccorrenze(numberArray, 2));
 
 // 48) Filtra indice pari
 // Scrivi una funzione filtraIndicePari(array) che tiene tutti gli elementi in posizione dispari
 
+// function filtraIndicePari(array){
+
+//     const newArray = [];
+
+//     for (let i = 0; i < array.length; i++) {
+
+//         const element = array[i];
+
+//         if(i % 2 === 1){
+//             newArray.push(element);
+//         }
+
+//     }
+
+//     return newArray;
+
+// }
+
+// console.log(filtraIndicePari(numberArray));
+// console.log(filtraIndicePari(stringArray));
 
 
-// 49) Somma pari 
+// 49) Somma pari
 // Scrivi una funzione sommaPari(array) che somma tutti i numeri pari
 
+//const numberArray = [2, 4, 8, 112, 156, 22, -61.5, 6, -11.5, 4, 44, 8];
+
+// function sommaPari(nbrArray){
+
+//     let result = 0;
+
+//     for (let i = 0; i < nbrArray.length; i++) {
+
+//         const element = nbrArray[i];
+
+//         if (element % 2 === 0) {
+//             result = result + element;
+//         }
+
+//     }
+
+//     return result
+// }
+
+// console.log(sommaPari(numberArray))
 
 // 50) trova lunghezze
 // Scrivi una funzione trovaLunghezzeParola(array) che restituisce un array delle lunghezze(numeri) delle stringhe che compongono l'array in input
 
+// function trovaLunghezzeParola(stringArray){
+
+//     const newArray = [];
+
+//     for (let i = 0; i < stringArray.length; i++) {
+
+//         const selectedString = stringArray[i];
+
+//         const length = selectedString.length;
+
+//         newArray.push(length);
+//     }
+
+//     return newArray;
+
+// }
+
+// console.log(trovaLunghezzeParola(stringArray));
 
 
+// const pippo = 1;
+
+// pippo = pippo + 1;
+
+
+// const pluto = [3, 4];
+
+// pluto.push(6); // aggiungere o togliere cose è possibile
+
+// pluto = [1, 1, 1]; // errore è una costante

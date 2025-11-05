@@ -1,4 +1,4 @@
-console.log('è il momento degli array')
+// console.log('è il momento degli array')
 
 ///ARRAY
 
@@ -453,31 +453,31 @@ let strings = ['pippo', 'pluto', 'topolino', 'leonardo'];
 
 //ARRAY DI ARRAY
 
-const superArray = [[1, 2, 3], 
-                    [1, 1, 1], 
-                    [3, 2, 1]]
+// const superArray = [[1, 2, 3], 
+//                     [1, 1, 1], 
+//                     [3, 2, 1]]
 
 // console.log(superArray.length);
 // console.log(superArray[0]);
 
-const arrayInterno = superArray[0];
-const elemento0dellArrayInteno = arrayInterno[0];
+// const arrayInterno = superArray[0];
+// const elemento0dellArrayInteno = arrayInterno[0];
 
 // console.log(elemento0dellArrayInteno)
 // console.log(superArray[0][0]);
 
-for (let rowNumber = 0; rowNumber < superArray.length; rowNumber++) {
+// for (let rowNumber = 0; rowNumber < superArray.length; rowNumber++) {
 
-    const row = superArray[rowNumber];
+//     const row = superArray[rowNumber];
 
-    for (let columnNumber = 0; columnNumber < row.length; columnNumber++) {
+//     for (let columnNumber = 0; columnNumber < row.length; columnNumber++) {
 
-        const cell = row[columnNumber]
+//         const cell = row[columnNumber]
 
 
-        console.log(cell);
-    }
+//         console.log(cell);
+//     }
     
-}
+// }
 
 
