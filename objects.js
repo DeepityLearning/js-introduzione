@@ -54,34 +54,154 @@
 
 ////////////////////////////
 
-const leaonardo  = {
-    name: 'leonardo',
-    surname: 'silva',
-    yob: 1998,
-    marks: [5, 8, 10, 7]
-}
+// function calculateMean(nbrArray) {
 
-const evelyn  = {
-    name: 'evelyn',
-    surname: 'medina',
-    yob: 1984,
-    marks: [9, 8, 10, 9]
-}
+//     let sum = 0;
+//     for (let i = 0; i < nbrArray.length; i++) {
 
-const luis  = {
-    name: 'luis',
-    surname: 'amoretti',
-    yob: 2004,
-    marks: [10, 10, 8, 5]
-}
+//         const element = nbrArray[i];
+//         sum = sum + element;
+//     }
+//     const mean = sum / nbrArray.length;
 
-const students = [leaonardo, evelyn, luis];
+//     return mean;
+// }
 
 
-console.log(students[0].name)
+// const leaonardo  = {
+//     name: 'leonardo',
+//     surname: 'silva',
+//     yob: 1998,
+//     marks: [5, 8, 10, 7]
+// }
 
-for (let i = 0; i < students.length; i++) {
-    const student = students[i];
+// const evelyn  = {
+//     name: 'evelyn',
+//     surname: 'medina',
+//     yob: 1984,
+//     marks: [9, 8, 10, 9]
+// }
+
+// const luis  = {
+//     name: 'luis',
+//     surname: 'amoretti',
+//     yob: 2004,
+//     marks: [10, 10, 8, 5]
+// }
+
+// const students = [leaonardo, evelyn, luis];
+
+
+// console.log(students[0].name)
+
+// for (let i = 0; i < students.length; i++) {
+//     const student = students[i];
     
-    console.log(student.name, student.surname)
-}
+//     console.log(student.name, student.surname, calculateMean(student.marks))
+
+// }
+
+///FOR IN
+
+// const ariel = {
+//     name: 'Ariello',
+//     age: 4,
+//     race: 'border collie',
+//     type: 'dog',
+//     'peggior nemico': 'husky'
+// }
+
+// let emptyString = '';
+
+// for (const key in ariel) {
+    
+//     const value = ariel[key];
+
+//     emptyString = emptyString + key + ': ' + value + '\n';
+// }
+
+// console.log(emptyString);
+
+/// NOTAZIONE CON PARENTESI QUADRE
+// console.log(ariel.name);
+// console.log(ariel['name']);
+
+// console.log(ariel['peggior nemico']);
+
+
+// JSON (JavaScript Object Notation);
+
+
+// const leaonardo = {
+//     name: 'leonardo', 
+//     surname: 'silva', 
+//     age: 27, 
+//     gender: 'maschio', 
+//     nationality: 'perù', 
+//     isMarried: false, 
+//     address: {
+//         street: 'via dodecanneso',
+//         civic: 16,
+//         city: 'genova',
+//         country: 'italia'
+//     }, 
+//     interests: ['musica', 'pagliaccio', 'bullo'] 
+// }
+
+// console.log(leaonardo);
+
+// const leoString = JSON.stringify(leaonardo);
+
+// console.log(leoString)
+
+// const dataString = '{"name": "Andrea", "surname": "Asioli", "yob": 1978, "isMarried": false}'
+
+// console.log(dataString);
+
+// const data = JSON.parse(dataString);
+
+// console.log(data);
+
+
+// const pippo = 3;
+
+// const pluto = 3;
+
+// console.log(pippo === pluto);
+
+
+// const ariel = {
+//     name: 'Ariello',
+//     age: 4,
+//     race: 'border collie',
+//     type: 'dog',
+//     'peggior nemico': 'husky'
+// }
+
+// const billy = {
+//     name: 'Ariello',
+//     age: 4,
+//     race: 'border collie',
+//     type: 'dog',
+//     'peggior nemico': 'husky'
+// }
+
+
+// console.log(ariel === billy);
+
+
+// const puppy = ariel;
+
+
+// console.log(ariel === puppy);
+
+
+// billy.age = 12;
+
+// console.log(billy);
+// console.log(ariel);
+
+// puppy.race = 'husky';
+
+// console.log(puppy);
+// console.log(ariel);
