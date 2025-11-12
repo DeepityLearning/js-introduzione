@@ -284,3 +284,137 @@
 // console.log(testArray.reduce(sumFirstChar, ''));
 // console.log(testArray.reduce((acc, curr) => acc + curr[0], ''));
 
+const students = ['luis', 'alexander', 'stefania', 'eros', 'daniel', 'salma'];
+const numbers = [30, 12, 5, 111, 300, 400, 1];
+
+//foreach
+
+
+// for (let i = 0; i < students.length; i++) {
+
+//     const student = students[i];
+    
+//     console.log(student);
+// }
+
+// for (const student of students) {console.log(student)}
+
+
+// students.forEach((pippo, pluto) => console.log(pluto, pippo))
+
+//find
+
+// function isGreaterThan100(nbr) {
+//     return nbr > 100;
+// }
+
+// function isGreaterThan5000(nbr) {
+//     return nbr > 5000;
+// }
+
+
+// console.log(numbers.filter(isGreaterThan100));
+// console.log(numbers.find(isGreaterThan100))
+// console.log(numbers.filter(isGreaterThan100)[0])
+
+//some
+
+
+// console.log(numbers.some(isGreaterThan100));
+// console.log(numbers.some(isGreaterThan5000));
+
+
+//sort
+
+// numbers.sort();
+
+// console.log(numbers);
+
+// students.sort();
+
+// console.log(students);
+
+
+function compareNumbersAscending(n1, n2){
+    // if (n1 > n2) {
+    //     return 1;
+    // } else if(n2 > n1){
+    //     return -1
+    // } else {
+    //     return 0;
+    // }
+
+    return n1 - n2;
+}
+
+function compareNumbersDescending(n1, n2){
+    return n2 - n1;
+}
+
+function compareStringsAscending(s1, s2){
+    return s1.localeCompare(s2);
+}
+
+function compareStringsDescending(s1, s2){
+    // return -s1.localeCompare(s2);
+    return s2.localeCompare(s1);
+}
+
+numbers.sort(compareNumbersDescending);
+
+console.log(numbers)
+
+students.sort(compareStringsDescending);
+
+console.log(students);
+
+
+const cars = [
+    {
+        model: "g-wagon",
+        producer: "mercedes",
+        maxSpeed: 180
+    },
+    {
+        model: "cla",
+        producer: "mercedes",
+        maxSpeed: 225
+    },
+    {
+        model: "panda",
+        producer: "fiat",
+        maxSpeed: 150
+    },
+    {
+        model: "bravo",
+        producer: "fiat",
+        maxSpeed: 180
+    },
+    {
+        model: "a4",
+        producer: "audi",
+        maxSpeed: 225
+    }
+]
+
+function compareCarsBySpeedDescending(car1, car2) {
+    return car2.maxSpeed - car1.maxSpeed;
+}
+
+function compareCarsByModelAscending(car1, car2) {
+    return car1.model.localeCompare(car2.model);
+}
+
+function compareCarsBySpeedDescendingAndModelAscending(car1, car2) {
+    if(car1.maxSpeed > car2.maxSpeed){
+        return -1;
+    } else if (car2.maxSpeed > car1.maxSpeed){
+        return 1;
+    } else {
+        return car1.model.localeCompare(car2.model);
+    }
+}
+
+cars.sort(compareCarsBySpeedDescendingAndModelAscending);
+
+console.log(cars);

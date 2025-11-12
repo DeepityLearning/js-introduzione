@@ -1437,464 +1437,490 @@
 ///// HIGH ORDER FUNCTIONS
 
 
-function highFilter(array, conditionFunction){
+// function highFilter(array, conditionFunction){
 
-    const newArray = []
+//     const newArray = []
 
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
 
-        if (conditionFunction(element, i, array)) {
-            newArray.push(element);
-        }
+//         if (conditionFunction(element, i, array)) {
+//             newArray.push(element);
+//         }
         
-    }
+//     }
 
-    return newArray;
-}
+//     return newArray;
+// }
 
-function highMap(array, transformFunction){
+// function highMap(array, transformFunction){
 
-    const newArray = [];
+//     const newArray = [];
 
-    for (let i = 0; i < array.length; i++) {
+//     for (let i = 0; i < array.length; i++) {
 
-        const element = array[i];
+//         const element = array[i];
 
-        const newElement = transformFunction(element, i);
+//         const newElement = transformFunction(element, i);
 
-        newArray.push(newElement); 
-    }
-    return newArray;
-}
+//         newArray.push(newElement); 
+//     }
+//     return newArray;
+// }
 
 
-function highReduce(array, reduceFunction, startingValue){
+// function highReduce(array, reduceFunction, startingValue){
 
-    let accumulator = startingValue;
+//     let accumulator = startingValue;
 
-    for (let i = 0; i < array.length; i++) {
+//     for (let i = 0; i < array.length; i++) {
 
-        const current = array[i];
+//         const current = array[i];
 
-        accumulator = reduceFunction(accumulator, current, i)
+//         accumulator = reduceFunction(accumulator, current, i)
         
-    }
+//     }
 
-    return accumulator;
-}
+//     return accumulator;
+// }
 
-const numberArray = [2, 4, 8, 112, 156, 22, -61.5, 6, -11.5, 4, 44, 8, 4];
+// const numberArray = [2, 4, 8, 112, 156, 22, -61.5, 6, -11.5, 4, 44, 8, 4];
 
-const stringArray = ['pizza', 'spaghetti', 'frittata', 'lasagne'];
+// const stringArray = ['pizza', 'spaghetti', 'frittata', 'lasagne'];
 
 
 
-// filter
-//51) Scrivi una funzione che, dato un array di numeri, crei un array con tutti i numeri
-// maggiori di 100
+// // filter
+// //51) Scrivi una funzione che, dato un array di numeri, crei un array con tutti i numeri
+// // maggiori di 100
 
-function keepGreaterThan100(nbrArray){
+// function keepGreaterThan100(nbrArray){
 
-    const newArray = [];
-    for (const nbr of nbrArray) {        
-        if (nbr > 100) {
-            newArray.push(nbr);
-        }
-    }
-    return newArray;
+//     const newArray = [];
+//     for (const nbr of nbrArray) {        
+//         if (nbr > 100) {
+//             newArray.push(nbr);
+//         }
+//     }
+//     return newArray;
 
-}
-console.log(keepGreaterThan100(numberArray));
+// }
+// console.log(keepGreaterThan100(numberArray));
 
-function isGreaterThan100(nbr){
-    // if (nbr > 100) {
-    //     return true;
-    // } else {
-    //     return false;
-    // }
-    return nbr > 100;
-}
+// function isGreaterThan100(nbr){
+//     // if (nbr > 100) {
+//     //     return true;
+//     // } else {
+//     //     return false;
+//     // }
+//     return nbr > 100;
+// }
 
-(nbr) => {
-    if (nbr > 100) {
-        return true;
-    } else {
-        return false;
-    }
-}
+// (nbr) => {
+//     if (nbr > 100) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
-console.log(highFilter(numberArray, isGreaterThan100));
-console.log(numberArray.filter(isGreaterThan100))
-console.log(numberArray.filter((nbr) => nbr > 100))
+// console.log(highFilter(numberArray, isGreaterThan100));
+// console.log(numberArray.filter(isGreaterThan100))
+// console.log(numberArray.filter((nbr) => nbr > 100))
 
-console.log(numberArray.filter((nbr) => {
-    if (nbr > 100) {
-        return true;
-    } else {
-        return false;
-    }
-}));
+// console.log(numberArray.filter((nbr) => {
+//     if (nbr > 100) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }));
     
 
 
-//52) Scrivi una funzione che, dato un array di stringhe, crei un array con tutte le stringhe 
-// che finiscono con 'a'
+// //52) Scrivi una funzione che, dato un array di stringhe, crei un array con tutte le stringhe 
+// // che finiscono con 'a'
 
-function keepEndingWithA(strArray){
+// function keepEndingWithA(strArray){
 
-    const newArray = [];
+//     const newArray = [];
 
-    for (const str of strArray) { 
+//     for (const str of strArray) { 
 
-        const lastChar = str[str.length - 1];
+//         const lastChar = str[str.length - 1];
 
-        if (lastChar === 'a') {
-            newArray.push(str);
-        }
-    }
+//         if (lastChar === 'a') {
+//             newArray.push(str);
+//         }
+//     }
 
-    return newArray;
-}
-console.log(keepEndingWithA(stringArray));
+//     return newArray;
+// }
+// console.log(keepEndingWithA(stringArray));
 
-function isEndingWithA(str){
-    // // const lastChar = str[str.length - 1];
+// function isEndingWithA(str){
+//     // // const lastChar = str[str.length - 1];
 
-    // // // if (lastChar === 'a') {
-    // // //     return true;
-    // // // } else {
-    // // //     return false;
-    // // // }
+//     // // // if (lastChar === 'a') {
+//     // // //     return true;
+//     // // // } else {
+//     // // //     return false;
+//     // // // }
 
-    // // return lastChar === 'a'
+//     // // return lastChar === 'a'
 
-    // return str[str.length - 1] === 'a';
-    return str.endsWith('a');
-}
+//     // return str[str.length - 1] === 'a';
+//     return str.endsWith('a');
+// }
 
-console.log(highFilter(stringArray, isEndingWithA));
-console.log(stringArray.filter(isEndingWithA));
-console.log(stringArray.filter((str) => str.endsWith('a')));
+// console.log(highFilter(stringArray, isEndingWithA));
+// console.log(stringArray.filter(isEndingWithA));
+// console.log(stringArray.filter((str) => str.endsWith('a')));
 
-//53) Scrivi una funzione che, dato un array di numeri, crei un array con tutti i numeri
-// divisibili per 3
+// //53) Scrivi una funzione che, dato un array di numeri, crei un array con tutti i numeri
+// // divisibili per 3
 
-function keepDivisibleBy3(nbrArray){
+// function keepDivisibleBy3(nbrArray){
 
-    const newArray = [];
+//     const newArray = [];
 
-    for (const nbr of nbrArray) {      
+//     for (const nbr of nbrArray) {      
 
-        if (nbr % 3 === 0) {
-            newArray.push(nbr);
-        }
+//         if (nbr % 3 === 0) {
+//             newArray.push(nbr);
+//         }
 
-    }
-    return newArray;
-}
+//     }
+//     return newArray;
+// }
 
-console.log(keepDivisibleBy3(numberArray));
+// console.log(keepDivisibleBy3(numberArray));
 
-function isDivisibleBy3(nbr){
-    // if (nbr % 3 === 0) {
-    //     return true;
-    // } else {
-    //     return false;
-    // }
-    return nbr % 3 === 0;
-}
+// function isDivisibleBy3(nbr){
+//     // if (nbr % 3 === 0) {
+//     //     return true;
+//     // } else {
+//     //     return false;
+//     // }
+//     return nbr % 3 === 0;
+// }
 
-console.log(highFilter(numberArray, isDivisibleBy3));
-console.log(numberArray.filter(isDivisibleBy3))
+// console.log(highFilter(numberArray, isDivisibleBy3));
+// console.log(numberArray.filter(isDivisibleBy3))
 
-function keepDivisibleBy3V2(nbrArray){
-    return nbrArray.filter((nbr) => nbr % 3 === 0);
-}
+// function keepDivisibleBy3V2(nbrArray){
+//     return nbrArray.filter((nbr) => nbr % 3 === 0);
+// }
 
-console.log(keepDivisibleBy3V2(numberArray))
+// console.log(keepDivisibleBy3V2(numberArray))
 
-// map
-//54) Scrivi una funzione che, dato un array di numeri, crei un array con tutti i numeri
-// elevati al cubo
+// // map
+// //54) Scrivi una funzione che, dato un array di numeri, crei un array con tutti i numeri
+// // elevati al cubo
 
-function cubeArray(nbrArray) {
+// function cubeArray(nbrArray) {
 
-    const newArray = [];
+//     const newArray = [];
 
-    for (const nbr of nbrArray) {
+//     for (const nbr of nbrArray) {
         
-        const cube = nbr ** 3;
+//         const cube = nbr ** 3;
 
-        newArray.push(cube);
+//         newArray.push(cube);
         
-    }
+//     }
     
-    return newArray;
-}
+//     return newArray;
+// }
 
-console.log(cubeArray(numberArray));
+// console.log(cubeArray(numberArray));
 
-function cubize(nbr){
-    return nbr ** 3;
-}
+// function cubize(nbr){
+//     return nbr ** 3;
+// }
 
-console.log(highMap(numberArray, cubize));
-console.log(numberArray.map(cubize));
-console.log(numberArray.map((n => n ** 3)));
+// console.log(highMap(numberArray, cubize));
+// console.log(numberArray.map(cubize));
+// console.log(numberArray.map((n => n ** 3)));
 
-function cubeArrayV2(nbrArray){
-    return nbrArray.map(cubize);
-}
+// function cubeArrayV2(nbrArray){
+//     return nbrArray.map(cubize);
+// }
 
 
-console.log(cubeArrayV2(numberArray));
-//55) Scrivi una funzione che, dato un array di stringhe, crei un array con tutte le stringhe 
-// con la prima lettera maiuscola
+// console.log(cubeArrayV2(numberArray));
+// //55) Scrivi una funzione che, dato un array di stringhe, crei un array con tutte le stringhe 
+// // con la prima lettera maiuscola
 
-function uppercaseFirstChar(str){
+// function uppercaseFirstChar(str){
 
-    //const firstChar = str[0];
-    const firstChar = str.charAt(0)
+//     //const firstChar = str[0];
+//     const firstChar = str.charAt(0)
 
-    const firstUpper = firstChar.toUpperCase();
+//     const firstUpper = firstChar.toUpperCase();
 
-    const remainigString = str.slice(1);
+//     const remainigString = str.slice(1);
 
-    const newString = firstUpper + remainigString;
+//     const newString = firstUpper + remainigString;
 
-    return newString;
+//     return newString;
 
-}
+// }
 
-console.log(highMap(stringArray,uppercaseFirstChar));
-console.log(stringArray.map(uppercaseFirstChar));
-console.log(stringArray.map((str) => str[0].toUpperCase() + str.slice(1)))
+// console.log(highMap(stringArray,uppercaseFirstChar));
+// console.log(stringArray.map(uppercaseFirstChar));
+// console.log(stringArray.map((str) => str[0].toUpperCase() + str.slice(1)))
 
-//56) Scrivi una funzione che, dato un array di numeri, crei un array di stringhe di
-//cancelletti lunga quanto il numero originale
-// [3, 4, 1, 0] -> ['###', '####', '#', '']
+// //56) Scrivi una funzione che, dato un array di numeri, crei un array di stringhe di
+// //cancelletti lunga quanto il numero originale
+// // [3, 4, 1, 0] -> ['###', '####', '#', '']
 
-function numberToHash(nbr) {
-    if (nbr <= 0) {
-        return '';
-    }
-    return '#'.repeat(nbr);
-}
+// function numberToHash(nbr) {
+//     if (nbr <= 0) {
+//         return '';
+//     }
+//     return '#'.repeat(nbr);
+// }
 
-console.log(highMap(numberArray, numberToHash));
-console.log(numberArray.map(numberToHash));
+// console.log(highMap(numberArray, numberToHash));
+// console.log(numberArray.map(numberToHash));
 
-console.log(numberArray.map((nbr) => nbr <= 0 ? '' : '#'.repeat(nbr)))
+// console.log(numberArray.map((nbr) => nbr <= 0 ? '' : '#'.repeat(nbr)))
 
-// reduce
-//57) Scrivi una funzione che, dato un array di numeri, li moltiplichi tutti tra loro
+// // reduce
+// //57) Scrivi una funzione che, dato un array di numeri, li moltiplichi tutti tra loro
 
-function multiplyAll(nbrArray){
+// function multiplyAll(nbrArray){
 
-    let accumulator = 1;
+//     let accumulator = 1;
 
-    for (const current of nbrArray) {
+//     for (const current of nbrArray) {
 
-        accumulator = accumulator * current;
+//         accumulator = accumulator * current;
         
-    }
+//     }
 
-    return accumulator;
-}
+//     return accumulator;
+// }
 
-//[2, 5, 4] => 1 * 2 * 5 * 4
-//[2, 5, 4] => 2 * 5 * 4
+// //[2, 5, 4] => 1 * 2 * 5 * 4
+// //[2, 5, 4] => 2 * 5 * 4
 
-function multiplyAllV2(nbrArray){
+// function multiplyAllV2(nbrArray){
 
-    let accumulator = nbrArray[0];
+//     let accumulator = nbrArray[0];
 
-    for (let i = 1; i < nbrArray.length; i++) {
-        const current = nbrArray[i];
+//     for (let i = 1; i < nbrArray.length; i++) {
+//         const current = nbrArray[i];
         
-        accumulator = accumulator * current;
-    }
+//         accumulator = accumulator * current;
+//     }
 
-    return accumulator;
+//     return accumulator;
 
-}
+// }
 
-console.log(multiplyAll(numberArray))
-console.log(multiplyAllV2(numberArray))
+// console.log(multiplyAll(numberArray))
+// console.log(multiplyAllV2(numberArray))
 
-function multiply(accumulator, current){
-    return accumulator * current;
-}
+// function multiply(accumulator, current){
+//     return accumulator * current;
+// }
 
-console.log(highReduce(numberArray, multiply, 1));
-console.log(numberArray.reduce(multiply, 1));
-console.log(numberArray.reduce((acc, curr) => acc * curr, 1));
+// console.log(highReduce(numberArray, multiply, 1));
+// console.log(numberArray.reduce(multiply, 1));
+// console.log(numberArray.reduce((acc, curr) => acc * curr, 1));
 
-console.log(numberArray.reduce(multiply));
-console.log(numberArray.reduce((acc, curr) => acc * curr));
+// console.log(numberArray.reduce(multiply));
+// console.log(numberArray.reduce((acc, curr) => acc * curr));
 
 
-//58) Scrivi una funzione che, dato un array di stringhe, crei una stringa composta 
-// dalle prime tre lettere delle strighe originarie
+// //58) Scrivi una funzione che, dato un array di stringhe, crei una stringa composta 
+// // dalle prime tre lettere delle strighe originarie
 
-function stringConcatFirst3(strArray){
+// function stringConcatFirst3(strArray){
 
-    let accumulator = '';
+//     let accumulator = '';
 
-    for (const current of strArray) {
+//     for (const current of strArray) {
 
-        const first3 = current.slice(0, 3);
+//         const first3 = current.slice(0, 3);
 
-        accumulator = accumulator + first3;
+//         accumulator = accumulator + first3;
         
-    }
+//     }
 
-    return accumulator;
-}
-
-
-console.log(stringConcatFirst3(stringArray))
+//     return accumulator;
+// }
 
 
-function concatFirst3(accumulator, current){
-    const first3 = current.slice(0,3);
-    return accumulator + first3;
-}
-
-console.log(highReduce(stringArray, concatFirst3, ''));
-console.log(stringArray.reduce(concatFirst3, ''));
-console.log(stringArray.reduce((acc, curr) => acc + curr.slice(0,3), ''));
+// console.log(stringConcatFirst3(stringArray))
 
 
+// function concatFirst3(accumulator, current){
+//     const first3 = current.slice(0,3);
+//     return accumulator + first3;
+// }
 
-//59) Scrivi una funzione che, dato un array di numeri, trovi il maggiore
+// console.log(highReduce(stringArray, concatFirst3, ''));
+// console.log(stringArray.reduce(concatFirst3, ''));
+// console.log(stringArray.reduce((acc, curr) => acc + curr.slice(0,3), ''));
 
-function maxArray(nbrArray) {
+
+
+// //59) Scrivi una funzione che, dato un array di numeri, trovi il maggiore
+
+// function maxArray(nbrArray) {
     
-    let accumulator = -Infinity;
+//     let accumulator = -Infinity;
     
-    for (const current of nbrArray) {
+//     for (const current of nbrArray) {
     
-        if (current > accumulator) {
-            accumulator = current;
-        }
+//         if (current > accumulator) {
+//             accumulator = current;
+//         }
 
-    }
+//     }
     
-    return accumulator;
-}
+//     return accumulator;
+// }
 
-function maxArrayV2(nbrArray) {
+// function maxArrayV2(nbrArray) {
     
-    let accumulator = nbrArray[0];
+//     let accumulator = nbrArray[0];
     
-    for (let i = 1; i < nbrArray.length; i++) {
-        const current = nbrArray[i]
+//     for (let i = 1; i < nbrArray.length; i++) {
+//         const current = nbrArray[i]
     
-        if (current > accumulator) {
-            accumulator = current;
-        }
+//         if (current > accumulator) {
+//             accumulator = current;
+//         }
 
-    }
+//     }
     
-    return accumulator;
-}
+//     return accumulator;
+// }
 
-console.log(maxArray(numberArray));
-console.log(maxArrayV2(numberArray));
+// console.log(maxArray(numberArray));
+// console.log(maxArrayV2(numberArray));
 
-function max(acc, curr) {
+// function max(acc, curr) {
     
-    if (curr > acc) {
-        return curr;
-    } else {
-        return acc;
-    }
+//     if (curr > acc) {
+//         return curr;
+//     } else {
+//         return acc;
+//     }
 
-}
+// }
 
-console.log(highReduce(numberArray, max, -Infinity));
-console.log(numberArray.reduce(max, -Infinity));
-console.log(numberArray.reduce(max));
-console.log(numberArray.reduce((acc, curr) => curr > acc ? curr : acc))
-console.log(numberArray.reduce((acc, curr) => {    
-    if (curr > acc) {
-        return curr;
-    } else {
-        return acc;
-    }
-}))
-
-
+// console.log(highReduce(numberArray, max, -Infinity));
+// console.log(numberArray.reduce(max, -Infinity));
+// console.log(numberArray.reduce(max));
+// console.log(numberArray.reduce((acc, curr) => curr > acc ? curr : acc))
+// console.log(numberArray.reduce((acc, curr) => {    
+//     if (curr > acc) {
+//         return curr;
+//     } else {
+//         return acc;
+//     }
+// }))
 
 
-//60) Scrivi una funzione che, dato un array di stringhe, trovi la stringa con più
-// volte ripetuta la lettera t;
 
-function countT(str){
 
-    let count = 0;
+// //60) Scrivi una funzione che, dato un array di stringhe, trovi la stringa con più
+// // volte ripetuta la lettera t;
 
-    for (let i = 0; i < str.length; i++) {
-        const char = str[i];
-        const upperChar = char.toUpperCase();
+// function countT(str){
 
-        if (upperChar === 'T') {
-            count ++;
-        }
+//     let count = 0;
+
+//     for (let i = 0; i < str.length; i++) {
+//         const char = str[i];
+//         const upperChar = char.toUpperCase();
+
+//         if (upperChar === 'T') {
+//             count ++;
+//         }
         
-    }
+//     }
 
-    return count;
+//     return count;
 
-}
+// }
 
-//['pizza', 'spaghetti', 'frittata', 'lasagne'];
+// //['pizza', 'spaghetti', 'frittata', 'lasagne'];
 
-function findTheStringWithMoreT(strArray) {
+// function findTheStringWithMoreT(strArray) {
 
-    let accumulator = '';
-    let accumulatorTcount = 0;
+//     let accumulator = '';
+//     let accumulatorTcount = 0;
 
-    for (const current of strArray) {
+//     for (const current of strArray) {
 
-        const currentTcount = countT(current);
+//         const currentTcount = countT(current);
 
-        if (currentTcount > accumulatorTcount) {
+//         if (currentTcount > accumulatorTcount) {
 
-            accumulator = current;
-            accumulatorTcount = currentTcount;
-        }   
-    }
-    return accumulator;
-}
-
-function findTheStringWithMoreTV2(strArray) {
-
-    let accumulator = '';
-
-    for (const current of strArray) {
-
-        if (countT(current) > countT(accumulator)) {
-
-            accumulator = current;
-
-        }   
-    }
-    return accumulator;
-}
+//             accumulator = current;
+//             accumulatorTcount = currentTcount;
+//         }   
+//     }
+//     return accumulator;
+// }
 
 
-function compareTnumber(acc, curr){
-    if (countT(curr) > countT(acc)) {
-        return curr;
-    }
-    return acc;
-}
+// function findTheStringWithMoreTV2(strArray) {
+
+//     let accumulator = '';
+
+//     for (const current of strArray) {
+
+//         if (countT(current) > countT(accumulator)) {
+
+//             accumulator = current;
+
+//         }   
+//     }
+//     return accumulator;
+// }
 
 
-console.log(findTheStringWithMoreT(stringArray));
-console.log(findTheStringWithMoreTV2(stringArray));
-console.log(highReduce(stringArray, compareTnumber, ''));
-console.log(stringArray.reduce(compareTnumber, ''));
+// function compareTnumber(acc, curr){
+//     if (countT(curr) > countT(acc)) {
+//         return curr;
+//     }
+//     return acc;
+// }
+
+
+// console.log(findTheStringWithMoreT(stringArray));
+// console.log(findTheStringWithMoreTV2(stringArray));
+// console.log(highReduce(stringArray, compareTnumber, ''));
+// console.log(stringArray.reduce(compareTnumber, ''));
+
+const prodotti = [
+  { id: 1, nome: "Mela", categoria: "Frutta", prezzo: 1.20, scadenza: "2025-11-15", peso: 0.2, biologico: true },
+  { id: 2, nome: "Pasta", categoria: "Pasta e Riso", prezzo: 0.80, scadenza: "2026-05-10", peso: 0.5, biologico: false },
+  { id: 3, nome: "Latte", categoria: "Latticini", prezzo: 1.10, scadenza: "2025-11-14", peso: 1, biologico: true },
+  { id: 4, nome: "Pane", categoria: "Pane e Sostituti", prezzo: 1.50, scadenza: "2025-11-12", peso: 0.3, biologico: false },
+  { id: 5, nome: "Yogurt", categoria: "Latticini", prezzo: 0.60, scadenza: "2025-11-20", peso: 0.125, biologico: true },
+  { id: 6, nome: "Riso", categoria: "Pasta e Riso", prezzo: 1.30, scadenza: "2027-02-20", peso: 1, biologico: false },
+  { id: 7, nome: "Pomodoro", categoria: "Ortaggi", prezzo: 0.90, scadenza: "2025-11-18", peso: 0.3, biologico: true },
+  { id: 8, nome: "Acqua", categoria: "Bevande", prezzo: 0.30, scadenza: "2026-12-31", peso: 1.5, biologico: false },
+  { id: 9, nome: "Biscotti", categoria: "Dolci", prezzo: 2.00, scadenza: "2026-03-01", peso: 0.2, biologico: false },
+  { id: 10, nome: "Uova", categoria: "Uova", prezzo: 2.50, scadenza: "2025-11-30", peso: 0.6, biologico: true },
+  { id: 11, nome: "Caffè", categoria: "Bevande", prezzo: 3.00, scadenza: "2026-10-01", peso: 0.25, biologico: false },
+  { id: 12, nome: "Formaggio", categoria: "Latticini", prezzo: 4.50, scadenza: "2025-12-10", peso: 0.2, biologico: true },
+  { id: 13, nome: "Carote", categoria: "Ortaggi", prezzo: 0.70, scadenza: "2025-11-25", peso: 1, biologico: true },
+  { id: 14, nome: "Tonno", categoria: "Conserve", prezzo: 1.80, scadenza: "2027-01-15", peso: 0.16, biologico: false },
+  { id: 15, nome: "Cioccolato", categoria: "Dolci", prezzo: 1.70, scadenza: "2026-04-30", peso: 0.1, biologico: false }
+];
+
+
+//61) mettere in ordine l'array di prodotti per prezzo dal più costoso in giù
+//62) mettere in ordine per nome discendente
+//63) mettere in ordine per categoria ascendente, e se uguali per peso dal più pesante
+//64) mettere in ordine per anno di scadenza dal più vicino
+//65) mettere in ordine per categoria discendente, se uguali per peso dal più piccolo, se uguali per nome ascendente
