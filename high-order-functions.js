@@ -1,286 +1,286 @@
-function sayHello() {
-    console.log('hello');
-}
+// function sayHello() {
+//     console.log('hello');
+// }
 
-const helloHello = () => console.log('hello hello!!');
+// const helloHello = () => console.log('hello hello!!');
 
-const superHello = function() {
-    console.log('super hello');
-}
+// const superHello = function() {
+//     console.log('super hello');
+// }
 
-console.log(helloHello);
-console.log(superHello);
-console.log(sayHello);
-
-
-/// FUNZIONI COME PARAMETRI IN INPUT
+// console.log(helloHello);
+// console.log(superHello);
+// console.log(sayHello);
 
 
-// FILTER
-
-const numbers = [-100, -30, 20, 11, 1, 40, -21, -15, 3, 9, 300, 5001];
-
-const testArray = ['pippo', 'pluto', 'paperino', 'qui', 'quo', 'qua'];
+// /// FUNZIONI COME PARAMETRI IN INPUT
 
 
-function keepPositive(nbrArray){
-    const newArray = [];
+// // FILTER
 
-    for (let i = 0; i < nbrArray.length; i++) {
+// const numbers = [-100, -30, 20, 11, 1, 40, -21, -15, 3, 9, 300, 5001];
 
-        const nbr = nbrArray[i];
+// const testArray = ['pippo', 'pluto', 'paperino', 'qui', 'quo', 'qua'];
+
+
+// function keepPositive(nbrArray){
+//     const newArray = [];
+
+//     for (let i = 0; i < nbrArray.length; i++) {
+
+//         const nbr = nbrArray[i];
         
-        if (nbr >= 0) {
-            newArray.push(nbr);
-        }
+//         if (nbr >= 0) {
+//             newArray.push(nbr);
+//         }
 
-    }
-    return newArray;
-}
+//     }
+//     return newArray;
+// }
 
-console.log(keepPositive(numbers));
+// console.log(keepPositive(numbers));
 
 
-function keepGreaterThan30(nbrArray){
-    const newArray = [];
+// function keepGreaterThan30(nbrArray){
+//     const newArray = [];
 
-    for (let i = 0; i < nbrArray.length; i++) {
+//     for (let i = 0; i < nbrArray.length; i++) {
 
-        const nbr = nbrArray[i];
+//         const nbr = nbrArray[i];
         
-        if (nbr > 30) { //è cambiata solo la condizione
-            newArray.push(nbr);
-        }
+//         if (nbr > 30) { //è cambiata solo la condizione
+//             newArray.push(nbr);
+//         }
 
-    }
-    return newArray;
-}
+//     }
+//     return newArray;
+// }
 
-console.log(keepGreaterThan30(numbers));
+// console.log(keepGreaterThan30(numbers));
 
 
-function keepLongerThan3(strArray){
-    const newArray = [];
+// function keepLongerThan3(strArray){
+//     const newArray = [];
 
-    for (let i = 0; i < strArray.length; i++) {
+//     for (let i = 0; i < strArray.length; i++) {
 
-        const str = strArray[i];
+//         const str = strArray[i];
         
-        if (str.length > 3) {
-            newArray.push(str);
-        }
+//         if (str.length > 3) {
+//             newArray.push(str);
+//         }
 
-    }
-    return newArray;
-}
+//     }
+//     return newArray;
+// }
 
-console.log(keepLongerThan3(testArray));
+// console.log(keepLongerThan3(testArray));
 
 
 
-function highFilter(array, conditionFunction){
+// function highFilter(array, conditionFunction){
 
-    const newArray = []
+//     const newArray = []
 
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
 
-        if (conditionFunction(element)) {
-            newArray.push(element);
-        }
+//         if (conditionFunction(element)) {
+//             newArray.push(element);
+//         }
         
-    }
+//     }
 
-    return newArray;
-}
+//     return newArray;
+// }
 
-function isEven(nbr) {
-    if (nbr % 2 === 0) {
-        return true;
-    } else {
-        return false;
-    }
-}
+// function isEven(nbr) {
+//     if (nbr % 2 === 0) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
-console.log(highFilter(numbers, isEven));
+// console.log(highFilter(numbers, isEven));
 
-function notStartingWithP(str){
+// function notStartingWithP(str){
 
-    const firstChar = str[0];
-    const firstLower = firstChar.toLowerCase();
+//     const firstChar = str[0];
+//     const firstLower = firstChar.toLowerCase();
 
-    if (firstLower !== 'p') {
-        return true;
-    } else {
-        return false;
-    }
+//     if (firstLower !== 'p') {
+//         return true;
+//     } else {
+//         return false;
+//     }
 
-}
+// }
 
-console.log(highFilter(testArray, notStartingWithP));
+// console.log(highFilter(testArray, notStartingWithP));
 
-console.log(highFilter(numbers,  (nbr) => nbr < 0));
+// console.log(highFilter(numbers,  (nbr) => nbr < 0));
 
-console.log(numbers.filter((nbr) => nbr < 0));
+// console.log(numbers.filter((nbr) => nbr < 0));
 
-// MAP
+// // MAP
 
-function multiplyBy3(nbrArray){
+// function multiplyBy3(nbrArray){
 
-    const newArray = [];
+//     const newArray = [];
     
-    for (let i = 0; i < nbrArray.length; i++) {
+//     for (let i = 0; i < nbrArray.length; i++) {
 
-        const nbr = nbrArray[i];
+//         const nbr = nbrArray[i];
 
-        const newNbr = nbr * 3;
+//         const newNbr = nbr * 3;
 
-        newArray.push(newNbr);
-    }
+//         newArray.push(newNbr);
+//     }
 
-    return newArray;
-}
+//     return newArray;
+// }
 
-console.log(multiplyBy3(numbers));
+// console.log(multiplyBy3(numbers));
 
 
-function multiplyByArrayPosition(nbrArray){
+// function multiplyByArrayPosition(nbrArray){
 
-    const newArray = [];
+//     const newArray = [];
     
-    for (let i = 0; i < nbrArray.length; i++) {
+//     for (let i = 0; i < nbrArray.length; i++) {
 
-        const nbr = nbrArray[i];
+//         const nbr = nbrArray[i];
 
-        const newNbr = nbr * i;
+//         const newNbr = nbr * i;
 
-        newArray.push(newNbr);
-    }
+//         newArray.push(newNbr);
+//     }
 
-    return newArray;
-}
+//     return newArray;
+// }
 
-console.log(multiplyByArrayPosition(numbers));
+// console.log(multiplyByArrayPosition(numbers));
 
 
-function toUpperCaseArray(strArray){
+// function toUpperCaseArray(strArray){
 
-    const newArray = [];
+//     const newArray = [];
     
-    for (let i = 0; i < strArray.length; i++) {
+//     for (let i = 0; i < strArray.length; i++) {
 
-        const str = strArray[i];
+//         const str = strArray[i];
 
-        const newString = str.toUpperCase();
+//         const newString = str.toUpperCase();
 
-        newArray.push(newString);
-    }
+//         newArray.push(newString);
+//     }
 
-    return newArray;
-}
+//     return newArray;
+// }
 
-console.log(toUpperCaseArray(testArray));
-
-
-function highMap(array, transformFunction){
-
-    const newArray = [];
-
-    for (let i = 0; i < array.length; i++) {
-
-        const element = array[i];
-
-        const newElement = transformFunction(element, i);
-
-        newArray.push(newElement); 
-    }
-    return newArray;
-}
+// console.log(toUpperCaseArray(testArray));
 
 
-function multiplyBy3number(nbr) {
-    return nbr * 3;
-}
+// function highMap(array, transformFunction){
 
-console.log(highMap(numbers, multiplyBy3number));
-console.log(highMap(numbers, (nbr) => nbr * 3));
-console.log(numbers.map((nbr) => nbr * 3));
+//     const newArray = [];
 
-console.log(highMap(numbers, (nbr, i) => nbr * i));
-console.log(numbers.map((nbr, i) => nbr * i));
+//     for (let i = 0; i < array.length; i++) {
 
-console.log(highMap(testArray, (str) => str.toUpperCase()));
-console.log(testArray.map((str) => str.toUpperCase()));
+//         const element = array[i];
+
+//         const newElement = transformFunction(element, i);
+
+//         newArray.push(newElement); 
+//     }
+//     return newArray;
+// }
 
 
-//REDUCE
+// function multiplyBy3number(nbr) {
+//     return nbr * 3;
+// }
 
-function sumAll(nbrArray){
+// console.log(highMap(numbers, multiplyBy3number));
+// console.log(highMap(numbers, (nbr) => nbr * 3));
+// console.log(numbers.map((nbr) => nbr * 3));
 
-    let sum = 0;
+// console.log(highMap(numbers, (nbr, i) => nbr * i));
+// console.log(numbers.map((nbr, i) => nbr * i));
 
-    for (let i = 0; i < nbrArray.length; i++) {
+// console.log(highMap(testArray, (str) => str.toUpperCase()));
+// console.log(testArray.map((str) => str.toUpperCase()));
 
-        const nbr = nbrArray[i];
 
-        sum = sum + nbr;
+// //REDUCE
+
+// function sumAll(nbrArray){
+
+//     let sum = 0;
+
+//     for (let i = 0; i < nbrArray.length; i++) {
+
+//         const nbr = nbrArray[i];
+
+//         sum = sum + nbr;
         
-    }
+//     }
 
-    return sum;
+//     return sum;
 
-}
+// }
 
-console.log(sumAll(numbers))
+// console.log(sumAll(numbers))
 
 
-function stringWithFirstChars(strArray){
+// function stringWithFirstChars(strArray){
 
-    let newString = '';
+//     let newString = '';
 
-    for (let i = 0; i < strArray.length; i++) {
+//     for (let i = 0; i < strArray.length; i++) {
 
-        const str = strArray[i];
+//         const str = strArray[i];
         
-        const firstChar = str[0];
-        newString = newString + firstChar;
+//         const firstChar = str[0];
+//         newString = newString + firstChar;
 
-    }
+//     }
 
-    return newString;
+//     return newString;
 
-}
+// }
 
-console.log(stringWithFirstChars(testArray));
+// console.log(stringWithFirstChars(testArray));
 
 
-function highReduce(array, reduceFunction, startingValue){
+// function highReduce(array, reduceFunction, startingValue){
 
-    let accumulator = startingValue;
+//     let accumulator = startingValue;
 
-    for (let i = 0; i < array.length; i++) {
+//     for (let i = 0; i < array.length; i++) {
 
-        const current = array[i];
+//         const current = array[i];
 
-        accumulator = reduceFunction(accumulator, current, i)
+//         accumulator = reduceFunction(accumulator, current, i)
         
-    }
+//     }
 
-    return accumulator;
-}
+//     return accumulator;
+// }
 
-console.log(highReduce(numbers, (sum, nbr) => sum + nbr, 0));
-console.log(numbers.reduce((sum, nbr) => sum + nbr, 0));
+// console.log(highReduce(numbers, (sum, nbr) => sum + nbr, 0));
+// console.log(numbers.reduce((sum, nbr) => sum + nbr, 0));
 
 
-function sumFirstChar(acc, curr){
+// function sumFirstChar(acc, curr){
 
-    const firstChar = curr[0];
+//     const firstChar = curr[0];
 
-    return acc + firstChar;
-}
+//     return acc + firstChar;
+// }
 
-console.log(highReduce(testArray, sumFirstChar, ''));
-console.log(testArray.reduce(sumFirstChar, ''));
-console.log(testArray.reduce((acc, curr) => acc + curr[0], ''));
+// console.log(highReduce(testArray, sumFirstChar, ''));
+// console.log(testArray.reduce(sumFirstChar, ''));
+// console.log(testArray.reduce((acc, curr) => acc + curr[0], ''));
 
